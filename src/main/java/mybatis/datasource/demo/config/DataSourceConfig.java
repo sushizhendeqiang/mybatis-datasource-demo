@@ -20,16 +20,16 @@ import javax.sql.DataSource;
 public class DataSourceConfig {
 
     /**
-     * @Description：
-     * * @Bean 告诉方法，产生了一个bean对象
-     * * @ConfigurationProperties 获取参数配置
      * @return
+     * @Description： * @Bean 告诉方法，产生了一个bean对象
+     * * @ConfigurationProperties 获取参数配置
      */
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.one")
     DataSource dataSourceOne() {
         return DruidDataSourceBuilder.create().build();
     }
+
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.two")
     DataSource dataSourceTwo() {
